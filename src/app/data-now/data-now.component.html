@@ -1,0 +1,38 @@
+<div class="bodyContainer">
+    <div class="DetailsHolder">
+        <table *ngIf="covidResponse" [ngStyle]="{'width': '100%'}">
+            <tr>
+                <td class="tabHeader">State</td>
+                <td class="tabHeader">Indian</td>
+                <td class="tabHeader">Foreign</td>
+                <td class="tabHeader">Death</td>
+                <td class="tabHeader">Discharge</td>
+                <td class="tabHeader">Total Confirmed</td>
+                <td class="tabHeader">Total Hospitals</td>
+                <td class="tabHeader">Urban</td>
+                <td class="tabHeader">Rural</td>
+                <td class="tabHeader">Total Beds</td>
+                <td class="tabHeader">Urban</td>
+                <td class="tabHeader">Rural</td>
+            </tr>
+            <tr *ngFor="let item of covidResponse.regional">
+                <td class="tabData">{{item.loc}}</td>
+                <td class="tabData">{{item.confirmedCasesIndian}}</td>
+                <td class="tabData">{{item.confirmedCasesForeign}}</td>
+                <td class="tabData">{{item.deaths}}</td>
+                <td class="tabData">{{item.discharged}}</td>
+                <td class="tabData">{{item.totalConfirmed}}</td>
+                <td class="tabData">{{getBedInfoByState(item.loc).totalHospitals}}</td>
+                <td class="tabData">{{getBedInfoByState(item.loc).urbanHospitals}}</td>
+                <td class="tabData">{{getBedInfoByState(item.loc).ruralHospitals}}</td>
+                <td class="tabData">{{getBedInfoByState(item.loc).totalBeds}}</td>
+                <td class="tabData">{{getBedInfoByState(item.loc).urbanBeds}}</td>
+                <td class="tabData">{{getBedInfoByState(item.loc).ruralBeds}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="adds">
+    <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=bappadb-21&marketplace=amazon&region=IN&placement=B088WPMDZL&asins=B088WPMDZL&linkId=36ea75fe134133ad4b54fa84a43038e3&show_border=true&link_opens_in_new_window=true"></iframe>
+    <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=bappadb-21&marketplace=amazon&region=IN&placement=B071D5DY3L&asins=B071D5DY3L&linkId=85041a96eb69f9d8b66028a22acd242b&show_border=true&link_opens_in_new_window=true"></iframe>
+    </div>
+</div>

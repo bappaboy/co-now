@@ -1,0 +1,36 @@
+.bodyContainer {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    display: flex;
+}
+
+.tabHeader {
+    background-color: #d3dcdc;
+    height: 25px;
+    text-align: center;
+    color: navy;
+    padding: 5px 5px 5px 5px;
+    font-size: 16px;
+}
+
+.tabData {
+    background-color: #f0f0f0;
+    height: 25px;
+    text-align: center;
+    color: rgb(25, 25, 26);
+    padding: 5px 5px 5px 5px;
+    font-size: 12px;
+}
+
+.DetailsHolder {
+    height: 500px;
+    overflow-y: scroll;
+    width: 70%;
+    flex: 1;
+}
+
+.adds {
+    float: right;
+    width: 10%;
+}
